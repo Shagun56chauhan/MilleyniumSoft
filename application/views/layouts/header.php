@@ -306,10 +306,10 @@
         </div>
         <ul class="navbar-center">
             <li><a href="<?php echo site_url('home') ?>">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="<?php echo site_url('aboutus') ?>">About Us</a></li>
+            <li><a href="<?php echo site_url('service') ?>">Services</a></li>
             <li><a href="#">Our Clients</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="<?php echo site_url('contactus') ?>">Contact Us</a></li>
         </ul>
         <div class="navbar-right">
             <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Company Icon" class="company-logo">
@@ -325,10 +325,10 @@
         </div>
         <ul class="navbar-center" id='navs'>
             <li><a href="<?php echo site_url('home') ?>">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="<?php echo site_url('aboutus') ?>">About Us</a></li>
+            <li><a href="<?php echo site_url('service') ?>">Services</a></li>
             <li><a href="#">Our Clients</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="<?php echo site_url('contactus') ?>">Contact Us</a></li>
         </ul>
         <div class="navbar-left">
             <span class="company-name">Milleynium Soft</span>
