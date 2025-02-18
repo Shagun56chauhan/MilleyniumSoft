@@ -2,17 +2,17 @@
     <div class="footer-container">
         <!-- 🔹 Company Info -->
         <div class="footer_outer">
-            <div class="footer-box">
+            <div class="footer-box cont">
                 <h2>Milleynium Soft</h2>
                 <p>Innovating the future with cutting-edge ERP solutions.</p>
             </div>
 
             <!-- 🔹 Contact Info -->
-            <div class="footer-box">
+            <div class="footer-box cont">
                 <h3>Contact Us</h3>
-                <p><strong>Email:</strong> info@milleyniumsoft.com</p>
-                <p><strong>Phone:</strong> +91 98765 43210</p>
-                <p><strong>Address:</strong> 123 Tech Park, India</p>
+                <p><strong>Email:</strong> milleyniumsoft@gmail.com</p>
+                <p><strong>Phone:</strong> +91 9459820876</p>
+                <p><strong>Address:</strong> Prem Niwas, Airport Road, Shivnagar, Totu Shimla-11</p>
             </div>
         </div>
 
@@ -21,10 +21,11 @@
             <div class="footer-box quick-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#"><span>●</span> Home</a></li>
-                    <li><a href="#"><span>●</span> About Us</a></li>
-                    <li><a href="#"><span>●</span> Services</a></li>
-                    <li><a href="#"><span>●</span> Contact</a></li>
+                    <li><a href="<?php echo site_url('home') ?>"><span>●</span> Home</a></li>
+                    <li><a href="<?php echo site_url('aboutus') ?>"><span>●</span> About Us</a></li>
+                    <li><a href="<?php echo site_url('service') ?>"><span>●</span> Services</a></li>
+                    <li><a href="<?php echo site_url('products') ?>"><span>●</span> Our Products</a></li>
+                    <li><a href="<?php echo site_url('contactus') ?>"><span>●</span> Contact</a></li>
                 </ul>
             </div>
 
@@ -71,11 +72,15 @@
         align-items: center;
         width: 45%;
         text-align: center;
+      
     }
 
     .footer-box {
         padding: 5px 10px;
         width: 100%;
+    }
+    .cont{
+        text-align: justify;
     }
 
     .footer-box h2 {

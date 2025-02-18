@@ -308,7 +308,7 @@
             <li><a href="<?php echo site_url('home') ?>">Home</a></li>
             <li><a href="<?php echo site_url('aboutus') ?>">About Us</a></li>
             <li><a href="<?php echo site_url('service') ?>">Services</a></li>
-            <li><a href="#">Our Clients</a></li>
+            <li><a href="<?php echo site_url('products') ?>">Our Products</a></li>
             <li><a href="<?php echo site_url('contactus') ?>">Contact Us</a></li>
         </ul>
         <div class="navbar-right">
@@ -327,7 +327,7 @@
             <li><a href="<?php echo site_url('home') ?>">Home</a></li>
             <li><a href="<?php echo site_url('aboutus') ?>">About Us</a></li>
             <li><a href="<?php echo site_url('service') ?>">Services</a></li>
-            <li><a href="#">Our Clients</a></li>
+            <li><a href="<?php echo site_url('products') ?>">Our Products</a></li>
             <li><a href="<?php echo site_url('contactus') ?>">Contact Us</a></li>
         </ul>
         <div class="navbar-left">

@@ -159,6 +159,7 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .cta-button:hover {
@@ -321,7 +322,7 @@
         <!-- CTA Section -->
         <div class="cta" data-aos="fade-up" data-aos-duration="1000">
             <h2>Interested in our ERP solutions?</h2>
-            <button class="cta-button">Contact Us Today</button>
+            <a href="<?php echo site_url('contactus') ?>" class="cta-button">Contact Us Today</a>
         </div>
 
         <!-- FAQ Section -->

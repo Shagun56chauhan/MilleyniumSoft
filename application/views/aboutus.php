@@ -305,7 +305,7 @@
 
         <section class="cta" data-aos="fade-up" data-aos-duration="1000">
             <h2>Ready to Transform Your Business?</h2>
-            <a href="#contact">Get in Touch</a>
+            <a href="<?php echo site_url('contactus') ?>">Get in Touch</a>
         </section>
 
     </div>

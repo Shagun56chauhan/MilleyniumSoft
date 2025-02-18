@@ -38,6 +38,10 @@
             justify-content: center;
             gap: 30px;
 
+            position: relative;
+            z-index: 1;
+           
+
         }
 
 
@@ -85,14 +89,54 @@
             background-color: var(--color-neutral-400);
         }
 
-        #particles-js {
+        /* js particles */
+        /* #particles-js {
             position: fixed;
             width: 100%;
             height: 100vh;
             z-index: -10;
             top: 0;
             left: 0;
+        } */
+        /* js particles */
+
+       /* particles css */
+        /* Neon Particle Effect */
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+          
         }
+
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #00ffff;
+            border-radius: 50%;
+            animation: moveParticles 5s infinite linear;
+        }
+
+        /* Animation for particle movement */
+        @keyframes moveParticles {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate(150px, 150px);
+                opacity: 0.4;
+            }
+            100% {
+                transform: translate(300px, 300px);
+                opacity: 0;
+            }
+        }
+       /* particles css */
 
         /* ✅ About Us Section */
         .about-us {
@@ -205,16 +249,21 @@
                 font-size: 1.4rem;
             }
 
-            .home {
+           
 
-                display: flex;
-                align-items: flex-start;
-                /* 👈 Align content to the top */
-                justify-content: flex-start;
-                /* 👈 Align content to the left */
-                padding-left: 45px;
-                /* border: 2px solid red; */
-            }
+             /* ✅ Home Page Background Same as Navbar */
+       html, body {
+            background-color: var(--color-black);
+            color: var(--color-neutral-200);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            width: 100%;
+
+
+        }
 
 
 
@@ -228,14 +277,15 @@
             .about-us {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                /* 👈 Align content to the top */
-                justify-content: flex-start;
+                
                 /* 👈 Align content to the left */
-                padding-left: 45px;
+
                 /* border: 2px solid red; */
-                text-align: left;
+                text-align: justify;
                
+            }
+            .about-us h2{
+                text-align: center;
             }
 
             .about-us .about-image {
@@ -263,15 +313,21 @@
 
 
     <div class="home">
-        <div id="particles-js"></div>
+  
+    <!-- <div id="particles-js"></div> -->
+         <!-- Particle Container -->
+    <div class="particles-container" id="particles-container"></div>
+
         <!-- ✅ Home Page Content (Scroll Animation Added) -->
         <div class="container">
             <div class="home-content" data-aos="fade-down" data-aos-duration="1500">
                 <h1>Welcome to Milleynium Soft</h1>
                 <p>We build next-generation ERP software for businesses.</p>
-                <a href="#" class="btn" data-aos="zoom-in" data-aos-duration="1000">Get Started</a>
+                <a href="<?php echo site_url('service') ?>" class="btn" data-aos="zoom-in" data-aos-duration="1000">Get Started</a>
             </div>
         </div>
+
+        
 
         <!-- ✅ About Us Section (Slide Animation on Scroll) -->
         <div class="about-us" data-aos="fade-up" data-aos-duration="1200">
@@ -328,12 +384,11 @@
 
     </div>
 
+<!-- js particles -->
 
-
-    <!-- ✅ Initialize AOS -->
-    <script>
+<!-- <script>
         window.onload = function () {
-            AOS.init(); // Activate scroll animations
+            AOS.init();
 
             particlesJS("particles-js", {
                 "particles": {
@@ -354,6 +409,37 @@
             });
         };
 
+    </script> -->
+<!-- js particles -->
+
+  
+    <script>
+
+         // Initialize AOS
+         AOS.init();
+
+        // Function to create particles
+        function createParticles() {
+            const container = document.getElementById('particles-container');
+            const numParticles = 100;
+
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                container.appendChild(particle);
+
+                // Set random positions and animation delays
+                const xPos = Math.random() * window.innerWidth;
+                const yPos = Math.random() * window.innerHeight;
+                const delay = Math.random() * 5;
+
+                particle.style.left = `${xPos}px`;
+                particle.style.top = `${yPos}px`;
+                particle.style.animationDelay = `${delay}s`;
+            }
+        }
+
+        window.onload = createParticles;
     </script>
 
     <?php $this->view('layouts/footer'); ?>
