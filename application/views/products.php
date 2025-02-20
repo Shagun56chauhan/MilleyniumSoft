@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Millennium Soft</title>
+    <title>Our Products - Milleynium Soft</title>
 
      <!-- ✅ AOS (Animate on Scroll) Library -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -130,6 +130,7 @@
             height: 100px;
             object-fit: contain;
             margin-bottom: 10px;
+            border-radius: 50%;
         }
 
         .record {
@@ -137,6 +138,7 @@
             height: 100px;
             object-fit: contain;
             margin-bottom: 10px;
+            border-radius: 100%;
         }
 
         .kk {
@@ -270,13 +272,13 @@
                     <a href="https://spipschool.org/" class="btn">Learn More</a>
                 </div>
                 <div class="card" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="assets/images/monal.png" alt="Monal Public School Logo" class="monal">
+                    <img src="assets/images/monal.jpg" alt="Monal Public School Logo" class="monal">
                     <h3>Monal Public School Shimla</h3>
                     <p>Smart school management system integration.</p>
                     <a href="https://monalpublicschool.org/" class="btn">Learn More</a>
                 </div>
                 <div class="card" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="assets/images/record.jpg" alt="Him Chatterjee Logo" class="record">
+                    <img src="assets/images/him-chatterjee.jpg" alt="Him Chatterjee Logo" class="record">
                     <h3>Him Chatterjee</h3>
                     <p>Renowned visual artist specializing in modern art and digital illustrations.</p>
                     <a href="https://himchatterjee.in/index.php/home" class="btn">Learn More</a>

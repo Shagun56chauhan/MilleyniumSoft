@@ -1,3 +1,7 @@
+<?php
+$current_page = basename($_SERVER['REQUEST_URI'], ".php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -107,8 +111,10 @@
             transition: color 0.3s ease;
         }
 
-        .navbar-center a:hover {
+        .navbar-center a:hover , .navbar-center a.active {
             color: #00ffff;
+            border-bottom: 2px solid #fff;
+            
         }
 
 
@@ -305,11 +311,11 @@
             <p>EMPOWERING INNOVATION ACCROSS INDUSTRIES</p>
         </div>
         <ul class="navbar-center">
-            <li><a href="<?php echo site_url('home') ?>">Home</a></li>
-            <li><a href="<?php echo site_url('aboutus') ?>">About Us</a></li>
-            <li><a href="<?php echo site_url('service') ?>">Services</a></li>
-            <li><a href="<?php echo site_url('products') ?>">Our Products</a></li>
-            <li><a href="<?php echo site_url('contactus') ?>">Contact Us</a></li>
+            <li><a href="<?php echo site_url('home') ?>" class="<?php echo $current_page == 'home' ? 'active' : '' ?>">Home</a></li>
+            <li><a href="<?php echo site_url('aboutus') ?>" class="<?php echo $current_page == 'aboutus' ? 'active' : '' ?>">About Us</a></li>
+            <li><a href="<?php echo site_url('service') ?>" class="<?php echo $current_page == 'service' ? 'active' : '' ?>">Services</a></li>
+            <li><a href="<?php echo site_url('products') ?>" class="<?php echo $current_page == 'products' ? 'active' : '' ?>">Our Products</a></li>
+            <li><a href="<?php echo site_url('contactus') ?>" class="<?php echo $current_page == 'contactus' ? 'active' : '' ?>">Contact Us</a></li>
         </ul>
         <div class="navbar-right">
             <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Company Icon" class="company-logo">
@@ -324,11 +330,11 @@
             <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Company Icon" class="company-logo">
         </div>
         <ul class="navbar-center" id='navs'>
-            <li><a href="<?php echo site_url('home') ?>">Home</a></li>
-            <li><a href="<?php echo site_url('aboutus') ?>">About Us</a></li>
-            <li><a href="<?php echo site_url('service') ?>">Services</a></li>
-            <li><a href="<?php echo site_url('products') ?>">Our Products</a></li>
-            <li><a href="<?php echo site_url('contactus') ?>">Contact Us</a></li>
+            <li><a href="<?php echo site_url('home') ?>" class="<?php echo $current_page == 'home' ? 'active' : '' ?>">Home</a></li>
+            <li><a href="<?php echo site_url('aboutus') ?>" class="<?php echo $current_page == 'aboutus' ? 'active' : '' ?>">About Us</a></li>
+            <li><a href="<?php echo site_url('service') ?>" class="<?php echo $current_page == 'service' ? 'active' : '' ?>">Services</a></li>
+            <li><a href="<?php echo site_url('products') ?>" class="<?php echo $current_page == 'products' ? 'active' : '' ?>">Our Products</a></li>
+            <li><a href="<?php echo site_url('contactus') ?>" class="<?php echo $current_page == 'contactus' ? 'active' : '' ?>">Contact Us</a></li>
         </ul>
         <div class="navbar-left">
             <span class="company-name">Milleynium Soft</span>

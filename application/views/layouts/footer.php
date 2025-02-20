@@ -2,23 +2,26 @@
     <div class="footer-container">
         <!-- 🔹 Company Info -->
         <div class="footer_outer">
-            <div class="footer-box cont">
-                <h2>Milleynium Soft</h2>
-                <p>Innovating the future with cutting-edge ERP solutions.</p>
-            </div>
 
-            <!-- 🔹 Contact Info -->
-            <div class="footer-box cont">
+
+         <!-- 🔹 Contact Info -->
+         <div class="footer-box cont">
                 <h3>Contact Us</h3>
                 <p><strong>Email:</strong> milleyniumsoft@gmail.com</p>
                 <p><strong>Phone:</strong> +91 9459820876</p>
                 <p><strong>Address:</strong> Prem Niwas, Airport Road, Shivnagar, Totu Shimla-11</p>
             </div>
-        </div>
+            <div class="footer-box ">
+                <h2>Milleynium Soft</h2>
+                <p>Innovating the future with cutting-edge ERP solutions.</p>
+            </div>
 
-        <div class="footer_outer">
+           
+     
+
+       
             <!-- 🔹 Quick Links -->
-            <div class="footer-box quick-links">
+            <!-- <div class="footer-box quick-links">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="<?php echo site_url('home') ?>"><span>●</span> Home</a></li>
@@ -27,7 +30,7 @@
                     <li><a href="<?php echo site_url('products') ?>"><span>●</span> Our Products</a></li>
                     <li><a href="<?php echo site_url('contactus') ?>"><span>●</span> Contact</a></li>
                 </ul>
-            </div>
+            </div> -->
 
             <!-- 🔹 Follow Us -->
             <div class="footer-box follow-us">
@@ -60,7 +63,6 @@
 
     .footer-container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -68,16 +70,18 @@
 
     .footer_outer {
         display: flex;
-        flex-direction: column;
+        width: 100%;
         align-items: center;
-        width: 45%;
         text-align: center;
+        justify-content: space-between;
+        /* margin: 20px; */
+        padding: 30px;
       
     }
 
     .footer-box {
         padding: 5px 10px;
-        width: 100%;
+      
     }
     .cont{
         text-align: justify;
@@ -107,7 +111,7 @@
         display: flex;
         gap: 15px;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .quick-links ul li a {
@@ -131,11 +135,19 @@
 
     .follow-us .social-icons {
         display: flex;
-        gap: 35px;
+        /* flex-direction: column; */
+       gap: 40px;
         justify-content: center;
         margin-top: 5px;
     }
 
+    .follow-us{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap:20px
+    }
     .follow-us a {
         font-size: 1rem;
         color: #ddd;
