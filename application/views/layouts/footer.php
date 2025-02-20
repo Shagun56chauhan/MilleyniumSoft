@@ -175,6 +175,7 @@
         .footer_outer {
             width: 100%;
             margin-bottom: 10px;
+            flex-direction: column;
         }
 
         .quick-links ul {
@@ -183,6 +184,9 @@
 
         .follow-us .social-icons {
             justify-content: center;
+        }
+        .cont{
+            text-align: center;
         }
     }
 </style>
